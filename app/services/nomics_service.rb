@@ -1,3 +1,5 @@
-class NomicsService
+class NomicsService 
+  include ServiceHelper
+  private
 
-end  
+end
