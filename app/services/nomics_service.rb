@@ -8,4 +8,9 @@ class NomicsService
         f.params[:key] = ENV['NOMICS_KEY']
     end
   end
+
+  def get_request(endpoint, params)
+    response = connection.get(url, params)
+    return response.body
+  end
 end
