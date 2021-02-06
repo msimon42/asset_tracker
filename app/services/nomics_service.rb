@@ -2,12 +2,13 @@ class NomicsService
   include ServiceHelper
 
   def request_all_assets
-    resp = get_request('/ticker')
+    resp = get_request('currencies/ticker')
     json_parse(resp)
   end
 
   def request_assets(assets)
-    resp = get_request('/ticker', {ids: assets.join('%2C')})
+    resp = get_request('currencies/ticker', {ids: assets.join('%2C')})
+    binding.pry
     json_parse(resp)
   end
 
