@@ -3,7 +3,7 @@ class YfService
 
   def get_individual_stock(ticker)
     resp = get_request('stock/v2/get-summary', {symbol: ticker})
-    json_parse(resp.body)
+    json_parse(resp)
   end
 
   private
