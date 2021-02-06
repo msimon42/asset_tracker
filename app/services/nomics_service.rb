@@ -21,7 +21,7 @@ class NomicsService
   end
 
   def get_request(endpoint, params=nil)
-    response = connection.get(url, params)
+    response = connection.get(endpoint, params)
     return response.body
   end
 end
