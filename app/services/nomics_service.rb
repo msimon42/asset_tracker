@@ -8,7 +8,6 @@ class NomicsService
 
   def request_assets(assets)
     resp = get_request('currencies/ticker', {ids: assets.join('%2C')})
-    binding.pry
     json_parse(resp)
   end
 
