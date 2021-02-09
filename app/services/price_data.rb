@@ -5,7 +5,6 @@ class PriceData
 
   def crypto_quotes(tickers)
     resp = NomicsService.new.request_assets(tickers)
-    quotes = Hash.new
-    resp.each{|i| Quote.new(i['symbol'], i['price'])}
+    return resp.map{|i| Quote.new(i['symbol'], i['price'])}
   end
 end
